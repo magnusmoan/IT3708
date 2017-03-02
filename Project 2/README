@@ -1,0 +1,11 @@
+The main part of this project is in the Code folder.
+Here you will find a java project which runs a genetic algorithm trying
+to solve the Multiple Depot Vehicle Routing Problem. The java code runs
+on a problem set, which can be found in the "Data/Data Files" folder.
+You can choose to either run a single one of these tests or to run all the tests.
+To run a single test, set the variable RUN_SINGLE_FILE=true in the ga.Parameters.class file.
+
+All results will be saved to "Data/Results" and then plottet using the python scripts inside
+the Plotter folder. If you choose to run all the test files (setting RUN_SINGLE_FILE=false), there
+will also be generated a "statistics" file in the "Data" folder which compares my performance
+to the known optimum.
