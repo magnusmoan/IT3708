@@ -2,8 +2,8 @@ package ga;
 
 public class Parameters {
 
-	public final static int POP_SIZE = 400;
-	public final static int NO_OF_GENERATIONS = 1500;
+	public final static int POP_SIZE = 500;
+	public final static int NO_OF_GENERATIONS = 3000;
 	
 	// Selection variables
 	public final static int NO_OF_ELITE = (int) Math.floor(POP_SIZE*0.02);
@@ -27,5 +27,5 @@ public class Parameters {
 	public final static String DATA_FOLDER = "../Data/";
 	public final static String STATISTICS_FILE = "statistics";
 	public final static String SCRIPT_FOLDER = "../Plotter/";
-	public final static String FILE_NAME = "p26";
+	public final static String FILE_NAME = "p21";
 }
