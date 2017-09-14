@@ -96,7 +96,8 @@ public class Chromosome implements Serializable{
 	}
 	
 	private void moveCustomerBetweenDepots(MDVRProblem problem) {
-		int depotId = random.nextInt(noOfDepots);
+		return;
+		/*int depotId = random.nextInt(noOfDepots);
 		Depot oldDepot = depots.get(depotId);
 		Customer customer = oldDepot.removeRandomCustomer();
 		
@@ -104,8 +105,9 @@ public class Chromosome implements Serializable{
 			return;
 		}
 		
+		
 		Depot newDepot = depots.get(Helper.getRandomIntNotEqual(depotId, noOfDepots, random));
-		newDepot.insertCustomerBestTruck(problem, customer);
+		newDepot.insertCustomerBestTruck(problem, customer);*/
 	}
 		
 	

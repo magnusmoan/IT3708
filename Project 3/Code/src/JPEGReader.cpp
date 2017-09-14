@@ -5,6 +5,7 @@
  *      Author: Moan
  */
 
+#include <iostream>
 #include <jpeglib.h>
 #include <jerror.h>
 #include <stddef.h>
@@ -12,7 +13,7 @@
 #include <stdlib.h>
 #include "JPEGReader.h"
 
-JPEGReader::JPEGReader(char* FileName) {
+JPEGReader::JPEGReader(const char* FileName) {
 	FILE* file = fopen(FileName, "rb");
 	info.err = jpeg_std_error(& err);
 	jpeg_create_decompress(& info);
@@ -32,9 +33,9 @@ JPEGReader::JPEGReader(char* FileName) {
 	if(channels == 4) type = 4;
 
 	data_size = x * y * 3;
-
 	jdata = (unsigned char *)malloc(data_size);
 	while (info.output_scanline < info.output_height) {
+
 		rowptr[0] = (unsigned char *)jdata +
 	            3* info.output_width * info.output_scanline;
 
@@ -44,5 +45,21 @@ JPEGReader::JPEGReader(char* FileName) {
 	jpeg_finish_decompress(&info);
 	jpeg_destroy_decompress(&info);
 	fclose(file);
-	free(jdata);
+}
+
+
+unsigned char * JPEGReader::getData() {
+	return jdata;
+}
+
+unsigned int JPEGReader::getSize() {
+	return data_size;
+}
+
+unsigned int JPEGReader::getWidth() {
+	return x;
+}
+
+unsigned int JPEGReader::getHeight() {
+	return y;
 }

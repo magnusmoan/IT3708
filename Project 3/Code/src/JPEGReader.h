@@ -16,13 +16,15 @@
 
 class JPEGReader {
 public:
-	JPEGReader(char* FileName);
+	JPEGReader(const char* FileName);
+	unsigned char * getData();
+	unsigned int getSize();
+	unsigned int getWidth();
+	unsigned int getHeight();
 
 private:
-	unsigned long x, y;
-	unsigned long data_size;
+	unsigned int x, y, data_size, type;
 	int channels;
-	unsigned int type;
 	unsigned char * rowptr[1];
 	unsigned char * jdata;
 	struct jpeg_decompress_struct info;

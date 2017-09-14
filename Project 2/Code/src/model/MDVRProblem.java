@@ -55,7 +55,6 @@ public class MDVRProblem {
 	}
 	
 	private void calculateDistances() {
-		
 		for(int depotId1 = 0; depotId1 < noOfDepots; depotId1++) {
 			
 			ArrayList<Double> depot1 = depots.get(depotId1);

@@ -49,7 +49,7 @@ public class InputHandler {
 			if(currLine.get(0).length() == 0) {
 				currLine.remove(0);
 			}
-
+			
 			double x = Double.parseDouble(currLine.get(1));
 			double y = Double.parseDouble(currLine.get(2));
 			double serviceDuration = Double.parseDouble(currLine.get(3));
